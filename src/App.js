@@ -5,6 +5,7 @@ import Marketplaces from './routes/Marketplaces';
 import Company from './routes/Company';
 import Resources from './routes/Resources';
 import Signup from "./routes/Signup"
+import SignupPatient from './routes/Signuppatient';
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <Route path="/company" element={<Company/>}/>
         <Route path="/resources" element={<Resources/>}/>
         <Route path="/signup" element={<Signup/>}/>
+        <Route path='/signuppatient' element={<SignupPatient/>}/>
       </Routes>
     </div>
   );
