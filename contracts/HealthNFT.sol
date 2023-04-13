@@ -11,6 +11,7 @@ contract HealthNFT is ERC721, ERC721URIStorage, ERC721Burnable, Ownable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
+    address payable owner;
 
     struct ListedToken {
         uint256 tokenId;
@@ -21,15 +22,18 @@ contract HealthNFT is ERC721, ERC721URIStorage, ERC721Burnable, Ownable {
     }
 
     //the event emitted when a token is successfully listed
-    event TokenListedSuccess (
+    event TokenListedSuccess(
         uint256 indexed tokenId,
         address owner,
         address seller,
         uint256 price,
         bool currentlyListed
     );
+    mapping(uint256 => ListedToken) private idToListedToken;
 
-    constructor() ERC721("HealthNFT", "HFT") {}
+    constructor() ERC721("HealthNFT", "HFT") {
+        owner = payable(msg.sender);
+    }
 
     function safeMint(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
@@ -40,20 +44,15 @@ contract HealthNFT is ERC721, ERC721URIStorage, ERC721Burnable, Ownable {
 
     // The following functions are overrides required by Solidity.
 
-    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+    function _burn(
+        uint256 tokenId
+    ) internal override(ERC721, ERC721URIStorage) {
         super._burn(tokenId);
     }
 
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        override(ERC721, ERC721URIStorage)
-        returns (string memory)
-    {
+    function tokenURI(
+        uint256 tokenId
+    ) public view override(ERC721, ERC721URIStorage) returns (string memory) {
         return super.tokenURI(tokenId);
     }
-
-    
-
-
 }

@@ -14,14 +14,17 @@ async function main() {
 
   const Lock = await hre.ethers.getContractFactory("Lock");
   const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+  const HealthNFT = await hre.ethers.getContractFactory("HealthNFT");
+  const healthnft = await HealthNFT.deploy();
 
   await lock.deployed();
-
+  await healthnft.deployed();
   console.log(
     `Lock with ${ethers.utils.formatEther(
       lockedAmount
     )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
   );
+  console.log(`Health NFT deployed to address ${healthnft.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

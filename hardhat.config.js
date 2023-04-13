@@ -1,5 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
-
+require("@nomiclabs/hardhat-ethers");
 // const fs = require("fs");
 // // const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
 

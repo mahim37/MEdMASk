@@ -56,6 +56,7 @@ const Minter = (props) => {
     //     setDescription("");
     //     setURL("");
     //   }
+    // setStatus("Success");
   };
 
   return (
