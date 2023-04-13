@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import "./NavbarStyles.css";
 import { MenuItems } from './MenuItems';
 import { Link } from 'react-router-dom';
-import Modal from '../routes/Modal';
 export default class Navbar extends Component {
   state={
     clicked: false
