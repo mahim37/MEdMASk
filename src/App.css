@@ -10,4 +10,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

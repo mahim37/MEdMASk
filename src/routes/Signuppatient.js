@@ -1,8 +1,10 @@
-import Minter from "../Minter";
+import NewNavbar from "../components/NewNavbar";
+import Spin from "../Spin";
 function SignupPatient() {
     return (
         <>
-        <Minter/>
+        <NewNavbar/>
+        <Spin/>
         </>
     )
 }
