@@ -2,6 +2,7 @@ import { useLocation, useParams } from 'react-router-dom';
 //import MarketplaceJSON from "../Marketplace.json";
 //import axios from "axios";
 //import NFTTile from "./NFTTile";
+import "./Spin.css";
 import NewNavbar from './components/NewNavbar';
 import { useState } from "react";
 export default function Dashboard () {
@@ -63,13 +64,13 @@ export default function Dashboard () {
         <div className="profileClass" style={{"min-height":"100vh"}}>
             <NewNavbar/>
             <div className="profileClass">
-            <div className="flex text-center flex-col mt-11 md:text-2xl text-white">
+            <div className="flex text-center flex-col mt-11 md:text-2xl text-grey">
                 <div className="mb-5">
                     <h2 className="font-bold">Wallet Address</h2>  
                     {address}
                 </div>
             </div>
-            <div className="flex flex-row text-center justify-center mt-10 md:text-2xl text-white">
+            <div className="flex flex-row text-center justify-center mt-10 md:text-2xl text-grey">
                     <div>
                         <h2 className="font-bold">No. of NFTs</h2>
                         {data.length}
@@ -79,7 +80,7 @@ export default function Dashboard () {
                         {totalPrice} ETH
                     </div>
             </div>
-            <div className="flex flex-col text-center items-center mt-11 text-white">
+            <div className="flex flex-col text-center items-center mt-11 text-grey">
                 <h2 className="font-bold">Your NFTs</h2>
                 <div className="flex justify-center flex-wrap max-w-screen-xl">
                     {data.map((value, index) => {

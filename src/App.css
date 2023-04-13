@@ -20,6 +20,12 @@
 
 .App {
   text-align: center;
+  background: url('./bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
