@@ -13,8 +13,11 @@ require("@nomiclabs/hardhat-ethers");
 // /** @type import('/config').HardhatUserConfig */
 
 module.exports = {
-  defaultNetwork: "gethnode",
+  defaultNetwork: "hardhat",
   networks: {
+    hardhat: {
+      chainId: 1337,
+    },
     gethnode: {
       url: "http://34.131.237.20/",
       chainId: 1337,

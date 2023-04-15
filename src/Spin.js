@@ -9,20 +9,13 @@ import {
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import "./Spin.css";
+import { ethers } from "ethers";
 // import createWeb3 from "./createWeb3";
 
 function Spin() {
   const [connected, toggleConnect] = useState(false);
   const location = useLocation();
   const [currAddress, updateAddress] = useState("0x");
-
-  async function getAddress() {
-    //   //const ethers = require("ethers");
-    //   const provider = new (window.ethereum);
-    //   const signer = provider.getSigner();
-    //   const addr = await signer.getAddress();
-    //   updateAddress(addr);
-  }
 
   function updateButton() {
     const ethereumButton = document.querySelector(".enableEthereumButton");
@@ -33,31 +26,40 @@ function Spin() {
     ethereumButton.classList.add("bg-green-500");
   }
 
-  async function connectWebsite() {
-    await window.ethereum
-      .request({ method: "eth_requestAccounts" })
-      .then(() => {
-        updateButton();
-        console.log("here");
-        getAddress();
-        window.location.replace(location.pathname);
-      });
-  }
+  const connectWebsite = async () => {
+    try {
+      if (window.ethereum) {
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const address = await signer.getAddress();
+
+        updateAddress(address);
+        toggleConnect(true);
+        // updateButton();
+      } else {
+        console.log("Metamask not found");
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
-    let val = window.ethereum.isConnected();
-    if (val) {
-      console.log("here");
-      getAddress();
-      toggleConnect(val);
-      updateButton();
+    if (connected) {
+      const ethereumButton = document.querySelector(".enableEthereumButton");
+      ethereumButton.textContent = "Connected";
+      ethereumButton.classList.remove("hover:bg-blue-70");
+      ethereumButton.classList.remove("bg-blue-500");
+      ethereumButton.classList.add("hover:bg-green-70");
+      ethereumButton.classList.add("bg-green-500");
     }
-
-    window.ethereum.on("accountsChanged", function (accounts) {
-      window.location.replace(location.pathname);
-    });
-  });
-
+    // if (window.ethereum) {
+    //   window.ethereum.on("accountsChanged", () => {
+    //     window.location.reload();
+    //   });
+    // }
+  }, [connected]);
   return (
     <div className="">
       <nav className="w-screen">
