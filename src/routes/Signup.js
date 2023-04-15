@@ -5,8 +5,9 @@ function Company() {
     return (
         <>
         <Navbar/>
+        <div className="thodasahi">
         <div className="tc">
-            <h1>Terms & Conditions</h1>
+            <h1 className="tandc">Terms & Conditions</h1>
             <ul className="tc">
                 <li>✦  MedMask will collect and store your medical history information in a secure manner. We will only share your information with your doctor or healthcare provider when you provide us with their contact information.</li>
                 <li>✦  Your medical history information will be converted into a non-fungible token (NFT) and stored on a blockchain for security purposes.</li>
@@ -19,6 +20,7 @@ function Company() {
             </ul>
         </div>
         <Modal/>
+        </div>
         </>
     )
 }

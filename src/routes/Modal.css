@@ -1,12 +1,17 @@
 body.active-modal {
     overflow-y: hidden;
 }
-
+.tandc {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
 .btn-modal {
-    padding: 10px 20px;
-    display: flex;
-    margin: 100px auto 0;
-    font-size: 18px;
+    height: 50px;
+    width: 300px;
+    margin-top: 200px;
+    font-size: 1.1rem;
+    background-color: #B9EDDD;
+    font-weight: bolder;
 }
 
 .modal, .overlay {
@@ -47,4 +52,12 @@ body.active-modal {
     margin-top: 5%;
     margin-right: 15%;
     text-align: left;
+}
+.thodasahi {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
 }
