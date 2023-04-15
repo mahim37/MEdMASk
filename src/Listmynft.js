@@ -87,7 +87,7 @@ export default function Listmynft() {
       alert("Successfully listed your NFT!");
       updateMessage("");
       updateFormParams({ name: "", description: "", price: "" });
-      window.location.replace("/dashboard");
+      window.location.replace("/profile");
     } catch (e) {
       alert("Upload error" + e);
     }
