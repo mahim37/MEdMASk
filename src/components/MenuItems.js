@@ -1,9 +1,9 @@
 export let MenuItems=[
     {
-        title : 'Businesses',
+        title : 'Home',
         url : '/',
         cName : 'nav-links',
-        icon : 'fa-solid fa-business-time'
+        icon : 'fa-solid fa-house'
     },
     {
         title : 'Marketplaces',

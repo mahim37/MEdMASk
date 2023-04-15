@@ -60,3 +60,30 @@
   opacity: 0.5;
   cursor: not-allowed;
 } */
+.profileClass {
+  margin-left: 20px;
+}
+.extrabuttons {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  margin-top: 50%;
+  grid-gap: 10%;
+}
+.eb {
+  height: 40px;
+  width: 120px;
+}
+.dashboard-design {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-gap: 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.extrabuttons {
+  margin-right: 15%;
+  display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 10px;
+}

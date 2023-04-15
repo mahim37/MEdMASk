@@ -8,6 +8,7 @@ import Signup from "./routes/Signup";
 import SignupPatient from "./routes/Signuppatient";
 import Listmynft from "./Listmynft";
 import Dashboard from "./Dashboard";
+import Transfernft from './Transfernft';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
         <Route path="/dashboard" element={<SignupPatient />} />
         <Route path="/listmynft" element={<Listmynft />}></Route>
         <Route path="/profile" element={<Dashboard />}></Route>
+        <Route path='/transfernft' element={<Transfernft/>}></Route>
       </Routes>
     </div>
   );

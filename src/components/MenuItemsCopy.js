@@ -1,9 +1,9 @@
 export let MenuItemsCopy = [
   {
-    title: "List My NFT",
-    url: "/listmynft",
+    title: "Dashboard",
+    url: "/dashboard",
     cName: "nav-links",
-    icon: "fa-solid fa-table-list",
+    icon: "fa-solid fa-table-columns",
   },
   {
     title: "Profile",
@@ -12,7 +12,7 @@ export let MenuItemsCopy = [
     icon: "fa-solid fa-user",
   },
   {
-    title: "Home",
+    title: "Back to Home",
     url: "/",
     cName: "nav-links",
     icon: "fa-solid fa-house",

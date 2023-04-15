@@ -7,7 +7,8 @@ const Accordion = () => {
   return (
     <>
         <section className="main-div">
-            <h1>Frequently Asked Questions (FAQs)</h1>
+            <h1 className="faqsh">Frequently Asked Questions (FAQs)</h1>
+            <br></br>
             {
                 data.map((curElem)=>{
                     const {id}=curElem;

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useParams,Link } from 'react-router-dom';
 import HealthNFTJSON from "./HealthNFT.json";
 import axios from "axios";
 import NFTTile from "./components/NFTTile";
@@ -68,6 +68,7 @@ export default function Dashboard() {
   return (
     <div className="profileClass" style={{ "min-height": "100vh" }}>
       <NewNavbar />
+      <div className="dashboard-design">
       <div className="profileClass">
         <div className="flex text-center flex-col mt-11 md:text-2xl text-grey">
           <div className="mb-5">
@@ -98,6 +99,7 @@ export default function Dashboard() {
               : ""}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
