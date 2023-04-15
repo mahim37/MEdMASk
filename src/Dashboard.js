@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import HealthNFTJSON from "./HealthNFT.json";
 import axios from "axios";
 import NFTTile from "./components/NFTTile";
@@ -29,7 +29,6 @@ export default function Dashboard() {
     let transaction1 = await contract.getMyNFTs();
     console.log(transaction1);
     let transaction = new Array(transaction1[8]);
-
     /*
      * Below function takes the metadata from tokenURI and the data returned by getMyNFTs() contract function
      * and creates an object of information that is to be displayed

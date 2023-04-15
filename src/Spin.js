@@ -1,47 +1,7 @@
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 import "./Spin.css";
-import { ethers } from "ethers";
 
 function Spin() {
-  const [connected, toggleConnect] = useState(false);
-  const location = useLocation();
-  const [currAddress, updateAddress] = useState("0x");
-
-  const connectWebsite = async () => {
-    try {
-      if (window.ethereum) {
-        await window.ethereum.request({ method: "eth_requestAccounts" });
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        const address = await signer.getAddress();
-
-        updateAddress(address);
-        toggleConnect(true);
-      } else {
-        console.log("Metamask not found");
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  useEffect(() => {
-    if (connected) {
-      const ethereumButton = document.querySelector(".enableEthereumButton");
-      ethereumButton.textContent = "Connected";
-      ethereumButton.classList.remove("hover:bg-blue-70");
-      ethereumButton.classList.remove("bg-blue-500");
-      ethereumButton.classList.add("hover:bg-green-70");
-      ethereumButton.classList.add("bg-green-500");
-    }
-    // if (window.ethereum) {
-    //   window.ethereum.on("accountsChanged", () => {
-    //     window.location.reload();
-    //   });
-    // }
-  }, [connected]);
   return (
     <div className="">
       <nav className="w-screen">
@@ -53,7 +13,7 @@ function Spin() {
           </li>
           <li className="w-2/6">
             <ul className="lg:flex justify-between font-bold mr-10 text-lg">
-              {location.pathname === "/" ? (
+              {window.location.pathname === "/" ? (
                 <li className="border-b-2 hover:pb-0 p-2">
                   <Link to="/">Marketplace</Link>
                 </li>
@@ -62,7 +22,7 @@ function Spin() {
                   <Link to="/">Marketplace</Link>
                 </li>
               )}
-              {location.pathname === "/sellNFT" ? (
+              {window.location.pathname === "/sellNFT" ? (
                 <li className="border-b-2 hover:pb-0 p-2">
                   <Link to="/sellNFT">List My NFT</Link>
                 </li>
@@ -71,7 +31,7 @@ function Spin() {
                   <Link to="/sellNFT">List My NFT</Link>
                 </li>
               )}
-              {location.pathname === "/profile" ? (
+              {window.location.pathname === "/profile" ? (
                 <li className="border-b-2 hover:pb-0 p-2">
                   <Link to="/profile">Profile</Link>
                 </li>
@@ -80,24 +40,10 @@ function Spin() {
                   <Link to="/profile">Profile</Link>
                 </li>
               )}
-              <li>
-                <button
-                  className="enableEthereumButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm"
-                  onClick={connectWebsite}
-                >
-                  {connected ? "Connected" : "Connect Wallet"}
-                </button>
-              </li>
             </ul>
           </li>
         </ul>
       </nav>
-      <div className="text-white text-bold text-right mr-10 text-sm">
-        {currAddress !== "0x"
-          ? "Connected to"
-          : "Not Connected. Please login to view NFTs"}{" "}
-        {currAddress !== "0x" ? currAddress.substring(0, 15) + "..." : ""}
-      </div>
     </div>
   );
 }
