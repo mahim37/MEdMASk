@@ -18,7 +18,7 @@ contract HealthNFT is ERC721URIStorage, ERC721Burnable {
     mapping(uint256 => bool) private _masterTokens;
 
     address payable owner;
-    uint256 listPrice = 1 ether;
+    uint256 listPrice = 0.01 ether;
 
     struct ListedToken {
         uint256 tokenId;

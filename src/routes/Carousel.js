@@ -1,8 +1,8 @@
-import React, {useState,useEffect} from "react";
-import './Carousel.css';
+import React, { useState, useEffect } from "react";
+import "./Carousel.css";
 import Data from "./Data";
-const Carousel=()=>{
-    const [people] = useState(Data);
+const Carousel = () => {
+  const [people] = useState(Data);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -23,8 +23,8 @@ const Carousel=()=>{
       clearInterval(slider);
     };
   }, [index]);
-    return (
-        <section className="section">
+  return (
+    <section className="section">
       <div className="title">
         <h1>User Testimonials</h1>
       </div>
@@ -43,7 +43,6 @@ const Carousel=()=>{
           }
           return (
             <article className={position} key={id}>
-              <img src='https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png' alt={name} className="person-img" />
               <h4>{name}</h4>
               <p className="title">{title}</p>
               <p className="text">{quote}</p>
@@ -54,10 +53,10 @@ const Carousel=()=>{
           <i className="fas fa-arrow-left"></i>
         </button>
         <button className="next" onClick={() => setIndex(index + 1)}>
-            <i className="fas fa-arrow-right"></i>   
+          <i className="fas fa-arrow-right"></i>
         </button>
       </div>
     </section>
-    )
-}
+  );
+};
 export default Carousel;

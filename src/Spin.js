@@ -1,30 +1,13 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import "./Spin.css";
 import { ethers } from "ethers";
-// import createWeb3 from "./createWeb3";
 
 function Spin() {
   const [connected, toggleConnect] = useState(false);
   const location = useLocation();
   const [currAddress, updateAddress] = useState("0x");
-
-  function updateButton() {
-    const ethereumButton = document.querySelector(".enableEthereumButton");
-    ethereumButton.textContent = "Connected";
-    ethereumButton.classList.remove("hover:bg-blue-70");
-    ethereumButton.classList.remove("bg-blue-500");
-    ethereumButton.classList.add("hover:bg-green-70");
-    ethereumButton.classList.add("bg-green-500");
-  }
 
   const connectWebsite = async () => {
     try {
@@ -36,7 +19,6 @@ function Spin() {
 
         updateAddress(address);
         toggleConnect(true);
-        // updateButton();
       } else {
         console.log("Metamask not found");
       }
@@ -65,17 +47,9 @@ function Spin() {
       <nav className="w-screen">
         <ul className="flex items-end justify-between py-3 bg-transparent text-white pr-5">
           <li className="flex items-end ml-5 pb-2">
-            <Link to="/">
-              <img
-                alt=""
-                width={120}
-                height={120}
-                className="inline-block -mt-2"
-              />
-              <div className="inline-block font-bold text-xl ml-2">
-                NFT Marketplace
-              </div>
-            </Link>
+            <div className="inline-block font-bold text-xl ml-2">
+              NFT Marketplace
+            </div>
           </li>
           <li className="w-2/6">
             <ul className="lg:flex justify-between font-bold mr-10 text-lg">
