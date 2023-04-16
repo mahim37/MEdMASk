@@ -37,7 +37,7 @@ function Blog() {
           </p>
         </div>
         <div className="border border-gray-300 rounded p-4">
-          <h2 className="text-lg font-bold mb-2">Concepts used:</h2>
+          <h2 className="text-lg font-bold mb-2">Technlogies used:</h2>
           <ul className="list-disc list-inside">
             <li>We are running private geth node on gcp using amd instances</li>
             <li>Running website using gcp t2d vm instance running on nginx</li>

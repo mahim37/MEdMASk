@@ -19,7 +19,7 @@ export default function Transfernft() {
     console.log(addr);
 
     const to = "0xb3Ed329EC47337016ABD6ac9871A394103968F11";
-    const tokenId = 8;
+    const tokenId = 0;
     let contract = new ethers.Contract(
       HealthNFTJSON.address,
       HealthNFTJSON.abi,
