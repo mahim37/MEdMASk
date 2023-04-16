@@ -1,5 +1,18 @@
 .tnft {
     background-color: #D8D8D8;
     height: 40px;
-    width: 475px;
+    width: 225px;
+}
+.transferform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 60%;
+    margin: 0 20%;
+}
+.formkalook {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 100px;
 }

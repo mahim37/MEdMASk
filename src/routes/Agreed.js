@@ -1,17 +1,14 @@
 import "./Agreed.css";
-import img1 from "./Agreed.png";
 function Agreed() {
     return (
         <div className="agreed">
             <div class="textsect">
-                <h1 className="abouth">Do you know what you have 
-                    <span className="agreed-word"> agreed </span>
-                to?</h1>
-                <p className="para">By utilizing our website, you consent to the conversion of your medical history into an NFT and the provision of access to a designated doctor.</p>
+                <h1 className="abouth">secure your health. own your data.</h1>
+                <p className="para">Tired of the headache-inducing task of managing your medical documents? We've created a platform that utilizes the latest in blockchain technology to protect your data from unauthorized access, while also giving you the freedom to share it on your terms. </p>
             </div>
-            <div className="imgsect">
+            {/* <div className="imgsect">
                 <img className="aboutwebsite" src={img1}></img>
-            </div>
+            </div> */}
         </div>
     )
 }
