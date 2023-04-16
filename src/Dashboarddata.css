@@ -1,10 +1,12 @@
-/* .twccards {
+.twccards {
     display: grid;
     grid-template-columns: repeat(3,auto);
     grid-gap: 10px;
-    width: 70%;
     margin: 0 15%;
     justify-content: center;
     align-items: center;
     text-align: center;
-} */
+}
+.cursor-pointer {
+    width: 1000px;
+}

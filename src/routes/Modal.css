@@ -6,10 +6,12 @@ body.active-modal {
     font-weight: bolder;
 }
 .btn-modal {
-    height: 100px;
-    width: 500px;
+    height: 60px;
+    width: 150px;
     font-size: 1.2rem;
     margin-top: 40px;
+    background-color: #B7B7B7;
+    font-weight: bolder;
 }
 
 .modal, .overlay {
