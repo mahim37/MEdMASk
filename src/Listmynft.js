@@ -109,7 +109,25 @@ export default function Listmynft() {
                 className="block text-purple-500 text-sm font-bold mb-2"
                 htmlFor="name"
               >
-                NFT Name
+                Name
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="name"
+                type="text"
+                placeholder="Axie#4563"
+                onChange={(e) =>
+                  updateFormParams({ ...formParams, name: e.target.value })
+                }
+                value={formParams.name}
+              ></input>
+            </div>
+            <div className="mb-6">
+            <label
+                className="block text-purple-500 text-sm font-bold mb-2"
+                htmlFor="name"
+              >
+                Enter your Gender
               </label>
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -125,32 +143,9 @@ export default function Listmynft() {
             <div className="mb-6">
               <label
                 className="block text-purple-500 text-sm font-bold mb-2"
-                htmlFor="description"
-              >
-                NFT Description
-              </label>
-              <textarea
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                cols="40"
-                rows="5"
-                id="description"
-                type="text"
-                placeholder="Axie Infinity Collection"
-                value={formParams.description}
-                onChange={(e) =>
-                  updateFormParams({
-                    ...formParams,
-                    description: e.target.value,
-                  })
-                }
-              ></textarea>
-            </div>
-            <div className="mb-6">
-              <label
-                className="block text-purple-500 text-sm font-bold mb-2"
                 htmlFor="price"
               >
-                Price (in ETH)
+                Enter your Age
               </label>
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

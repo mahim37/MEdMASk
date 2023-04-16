@@ -1,8 +1,6 @@
-.agreed-word {
-    color: #2F58CD;
-}
 .abouth {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: bolder;
 }
 .blog-written {
     text-align: left;
@@ -14,7 +12,7 @@
 }
 .para {
     margin-top: 40px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: #7D6E83;
 }
 .agreed {

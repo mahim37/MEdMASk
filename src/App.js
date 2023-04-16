@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState,useEffect } from "react";
 import Businesses from "./routes/Businesses";
 import { Route, Routes } from "react-router-dom";
 import Marketplaces from "./routes/Marketplaces";
@@ -9,10 +10,28 @@ import SignupPatient from "./routes/Signuppatient";
 import Listmynft from "./Listmynft";
 import Dashboard from "./Dashboard";
 import Transfernft from './Transfernft';
+import ClipLoader from "react-spinners/ClipLoader";
+import { ClimbingBoxLoader } from "react-spinners";
 function App() {
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false);
+    },1000)
+  },[])
   return (
     <div className="App">
-      <Routes>
+      {
+        loading ?
+        <ClimbingBoxLoader
+        className="loadingwalacheez"
+        color={'#222'}
+        loading={loading}
+        size={30}
+      />
+        :
+        <Routes>
         <Route path="/" element={<Businesses />} />
         <Route path="/marketplaces" element={<Marketplaces />} />
         <Route path="/company" element={<Company />} />
@@ -23,6 +42,7 @@ function App() {
         <Route path="/profile" element={<Dashboard />}></Route>
         <Route path='/transfernft' element={<Transfernft/>}></Route>
       </Routes>
+      }
     </div>
   );
 }
