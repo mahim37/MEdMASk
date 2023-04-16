@@ -62,7 +62,7 @@ function Team(){
                                 <img src='https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' className="team-img"></img>
                                 <h2>Mahim Gupta</h2>
                                 <div className="team-info">
-                                    <p>Front-End Developer</p>
+                                    <p>Back-End Developer</p>
                                     <ul className="team-icon">
                                         <li>
                                             <a href="https://www.linkedin.com/in/mahim-gupta73/" className="linkedin">
@@ -83,7 +83,7 @@ function Team(){
                                 <img src='https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' className="team-img"></img>
                                 <h2>Sidhharth Rodrigues</h2>
                                 <div className="team-info">
-                                    <p>Front-End Developer</p>
+                                    <p>Back-End Developer</p>
                                     <div className="social-media">
                                     <div className="social-media">
                                         <ul className="team-icon">

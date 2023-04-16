@@ -1,4 +1,4 @@
-import { useLocation, useParams,Link } from 'react-router-dom';
+import { useLocation, useParams, Link } from "react-router-dom";
 import HealthNFTJSON from "./HealthNFT.json";
 import axios from "axios";
 import NFTTile from "./components/NFTTile";
@@ -66,40 +66,39 @@ export default function Dashboard() {
   if (!dataFetched) getNFTData(tokenId);
 
   return (
-    <div className="profileClass" style={{ "min-height": "100vh" }}>
+    <div className="min-h-screen bg-gray-100">
       <NewNavbar />
-      <div className="dashboard-design">
-      <div className="profileClass">
-        <div className="flex text-center flex-col mt-11 md:text-2xl text-grey">
-          <div className="mb-5">
+      <div className="py-10 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="bg-white rounded-lg shadow-lg px-8 py-10 md:py-12">
+          <div className="mb-8 text-center md:text-2xl text-gray-600">
             <h2 className="font-bold">Wallet Address</h2>
-            {address}
+            <p className="mt-2">{address}</p>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12 text-gray-600">
+            <div className="text-center">
+              <h2 className="font-bold">No. of NFTs</h2>
+              <p className="mt-2">{data.length}</p>
+            </div>
+            <div className="text-center">
+              <h2 className="font-bold">Total Value</h2>
+              <p className="mt-2">{totalPrice} ETH</p>
+            </div>
+          </div>
+          <div className="mt-10 text-center md:text-xl text-gray-600">
+            <h2 className="font-bold">Your NFTs</h2>
+            {data.length > 0 ? (
+              <div className="flex justify-center flex-wrap max-w-screen-xl mt-6">
+                {data.map((value, index) => (
+                  <NFTTile data={value} key={index} />
+                ))}
+              </div>
+            ) : (
+              <p className="mt-6">
+                Oops, No NFT data to display (Are you logged in?)
+              </p>
+            )}
           </div>
         </div>
-        <div className="flex flex-row text-center justify-center mt-10 md:text-2xl text-grey">
-          <div>
-            <h2 className="font-bold">No. of NFTs</h2>
-            {data.length}
-          </div>
-          <div className="ml-20">
-            <h2 className="font-bold">Total Value</h2>
-            {totalPrice} ETH
-          </div>
-        </div>
-        <div className="flex flex-col text-center items-center mt-11 text-grey">
-          <h2 className="font-bold">Your NFTs</h2>
-          <div className="flex justify-center flex-wrap max-w-screen-xl">
-            {data.map((value, index) => {
-              return <NFTTile data={value} key={index}></NFTTile>;
-            })}
-          </div>
-          <div className="mt-10 text-xl">
-            {data.length === 0
-              ? "Oops, No NFT data to display (Are you logged in?)"
-              : ""}
-          </div>
-        </div>
-      </div>
       </div>
     </div>
   );

@@ -74,7 +74,7 @@ export default function NewNavbar() {
 
   return (
     <nav className="NavbarItems">
-      <h1 className="navbar-logo">MEdMASk</h1>
+      <h1 className="navbar-logo">MedMask</h1>
       <div className="menu-icons" onClick={handleClick}>
         <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
