@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Dashboarddata.css"
+import img2 from "./transfer.png";
+import img1 from "./l.png";
+import img3 from "./m.png";
 function shuffle(array) {
   let currentIndex = array.length,
     randomIndex;
@@ -16,21 +20,21 @@ function shuffle(array) {
 export default function Dashboarddata() {
   const [posts, setPosts] = useState([
     {
-      image: "https://images.unsplash.com/photo-1445077100181-a33e9ac94db0",
+      image: img1,
       title: "List NFT",
       description:
         "sting coffee. How can we achieve the best tasting coffeeroasting?",
       urllink: "/listmynft",
     },
     {
-      image: "https://images.unsplash.com/photo-1445077100181-a33e9ac94db0",
+      image: img2,
       title: "Transfer NFT",
       description:
         "sting coffee. How can we achieve the best tasting coffeeroasting?",
       urllink: "/transfernft",
     },
     {
-      image: "https://images.unsplash.com/photo-1445077100181-a33e9ac94db0",
+      image: "https://i0.wp.com/cifs.health/wp-content/uploads/2022/05/challenges-nft-healthcare.jpg?fit=1200%2C627&ssl=1",
       title: "Marketplace",
       description:
         "sting coffee. How can we achieve the best tasting coffeeroasting?",
@@ -38,9 +42,9 @@ export default function Dashboarddata() {
     },
   ]);
   return (
-    <div className="twccards flex justify-center">
-      <div className="bg-gray-100 dark:bg-gray-900 py-10 px-12">
-        <div className="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="twccards">
+      <div className="bg-white-100 dark:bg-white-900 py-100 px-120">
+        <div className="grid grid-flow-row gap-20 text-neutral-1000 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {shuffle(posts).map((post, index) => (
             <div
               key={index}

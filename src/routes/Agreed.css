@@ -1,6 +1,8 @@
 .abouth {
   font-size: 3rem;
   font-weight: bolder;
+  width: 70%;
+  margin-top: 80px;
 }
 .blog-written {
   text-align: left;
@@ -16,13 +18,14 @@
   color: #7d6e83;
 }
 .agreed {
-  margin-top: 80px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-gap: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .aboutwebsite {
   height: 450px;
