@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./Spin.css";
-
 function Spin() {
   return (
     <div className="">

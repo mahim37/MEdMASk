@@ -8,9 +8,8 @@ import Resources from "./routes/Resources";
 import Signup from "./routes/Signup";
 import SignupPatient from "./routes/Signuppatient";
 import Listmynft from "./Listmynft";
-import Dashboard from "./Dashboard";
+import Dashboard from "./Profile";
 import Transfernft from './Transfernft';
-import ClipLoader from "react-spinners/ClipLoader";
 import { ClimbingBoxLoader } from "react-spinners";
 function App() {
   const [loading,setLoading]=useState(false);
@@ -24,12 +23,14 @@ function App() {
     <div className="App">
       {
         loading ?
-        <ClimbingBoxLoader
-        className="loadingwalacheez"
-        color={'#222'}
-        loading={loading}
-        size={30}
-      />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+  <ClimbingBoxLoader
+    className="loadingwalacheez"
+    color={'#222'}
+    loading={loading}
+    size={30}
+  />
+</div>
         :
         <Routes>
         <Route path="/" element={<Businesses />} />
