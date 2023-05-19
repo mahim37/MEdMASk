@@ -1,6 +1,5 @@
 import "./Spin.css";
 import NewNavbar from "./components/NewNavbar";
-import "./Tnft.css";
 import { ethers } from "ethers";
 import React from "react";
 import HealthNFTJSON from "./HealthNFT.json";

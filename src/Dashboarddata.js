@@ -23,21 +23,21 @@ export default function Dashboarddata() {
       image: img1,
       title: "List NFT",
       description:
-        "sting coffee. How can we achieve the best tasting coffeeroasting?",
+        "This category allows patients to easily list their NFTs on the blockchain, providing a secure and transparent record of their medical assets. Patients can showcase their NFTs, including medical records, diagnostic images, or health-related tokens, creating a personalized digital health portfolio.",
       urllink: "/listmynft",
     },
     {
       image: img2,
       title: "Transfer NFT",
       description:
-        "sting coffee. How can we achieve the best tasting coffeeroasting?",
+        "The Transfer NFT category enables seamless transfer of NFT ownership from patients to doctors. This feature ensures that doctors can securely access and update patient data, facilitating efficient communication and collaboration while maintaining data integrity and patient privacy.",
       urllink: "/transfernft",
     },
     {
       image: "https://i0.wp.com/cifs.health/wp-content/uploads/2022/05/challenges-nft-healthcare.jpg?fit=1200%2C627&ssl=1",
       title: "Marketplace",
       description:
-        "sting coffee. How can we achieve the best tasting coffeeroasting?",
+        "The Marketplace category serves as a central hub for patients to manage and explore their past NFTs. It provides an organized overview of the patients' medical NFTs, allowing them to review their medical history, monitor progress, and potentially engage in peer-to-peer exchange or selling of NFTs within a trusted healthcare ecosystem.",
       urllink: "/nftmarketplace",
     },
   ]);
