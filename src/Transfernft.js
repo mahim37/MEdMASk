@@ -137,11 +137,12 @@ export default function Transfernft() {
               </div>
               <br />
               <button
-                className="btn bg-blue-500 text-white hover:bg-blue-700"
-                onClick={transfer}
-              >
-                Transfer NFT
-              </button>
+  className="btn bg-blue-500 text-white hover:bg-blue-700 h-11"
+  onClick={transfer}
+>
+  Transfer NFT
+</button>
+
               {showDialog && (
                 <Dialog message={dialogMessage} onClose={handleCloseDialog} />
               )}

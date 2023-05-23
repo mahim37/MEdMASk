@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 export default function Footer() {
   return (
-    <MDBFooter style={{ marginTop: '150px' ,fontWeight: 'bolder',fontSize: '1.1rem', backgroundColor: '#00FFCA', borderRadius: '40px'}} className='text-center text-lg-start text-muted'>
+    <MDBFooter style={{ width:'95%',marginLeft:'2.5%',marginRight:'2.5%',marginTop: '150px',marginBottom: '20px' ,fontWeight: 'bolder',fontSize: '1.1rem', backgroundColor: '#85CDFD', boxShadow: '0 5px 15px 0 rgb(51, 54, 54)'}} className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-between align-items-center p-4 border-bottom'>
   <div className='d-lg-block'>
     <span>Get connected with us on social networks:</span>
@@ -59,7 +59,7 @@ export default function Footer() {
 </h6>
       <p>
         <MDBIcon icon="envelope" className="me-3" />
-        medmask@gmail.com
+        medmask4cloud@gmail.com
       </p>
       <p>
         <MDBIcon icon="phone" className="me-3" /> +91 8080713213

@@ -39,10 +39,10 @@ function Blog() {
         <div className="border border-gray-300 rounded p-4">
           <h2 className="text-lg font-bold mb-2">Concepts used:</h2>
           <ul className="list-disc list-inside">
-            <li>We are running private geth node on gcp using amd instances</li>
-            <li>Running website using gcp t2d vm instance running on nginx</li>
-            <li>Used ER721 contract</li>
-            <li>Hardhat to test and deploy</li>
+            <li>We are running private geth node on GCP using AMD instances</li>
+            <li>Running website using GCP T2D VM instance running on nginx</li>
+            <li>Utilized ER721 contract for the project.</li>
+            <li>Deployed and tested using Hardhat framework.</li>
           </ul>
         </div>
       </div>

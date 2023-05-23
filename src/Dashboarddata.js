@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./Dashboarddata.css"
 import img2 from "./transfer.png";
 import img1 from "./l.png";
-import img3 from "./m.png";
 function shuffle(array) {
   let currentIndex = array.length,
     randomIndex;
@@ -45,7 +44,7 @@ export default function Dashboarddata() {
     <div className="twccards">
       <div className="bg-white-100 dark:bg-white-900 py-100 px-120">
         <div className="grid grid-flow-row gap-20 text-neutral-1000 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-          {shuffle(posts).map((post, index) => (
+          {posts.map((post, index) => (
             <div
               key={index}
               className="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1"

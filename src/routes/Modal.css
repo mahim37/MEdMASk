@@ -7,10 +7,10 @@ body.active-modal {
 }
 .btn-modal {
     height: 60px;
-    width: 150px;
+    width: 250px;
     font-size: 1.2rem;
     margin-top: 40px;
-    background-color: #00FFCA;
+    background-color: #85CDFD;
     border: 2px solid black;
     font-weight: bolder;
 }
