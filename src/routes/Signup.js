@@ -5,6 +5,8 @@ function Company() {
     return (
         <>
         <Navbar/>
+        <br></br>
+        <br></br>
         <div className="thodasahi">
         <div className="tc">
             <h1 className="tandc">Terms & Conditions</h1>
