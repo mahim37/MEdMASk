@@ -1,70 +1,75 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Medical NFTs: MedMask
 
-## Available Scripts
+This project aims to create a platform for managing medical documents using NFTs (non-fungible tokens). NFTs are unique digital assets that can represent anything from art to music to medical data. By using NFTs, this project hopes to solve some of the problems that patients, doctors, and advertisers face when dealing with medical data.
 
-In the project directory, you can run:
+## Problem Statement
 
-### `npm start`
+- Managing medical documents is inconvenient for both patients and doctors. Patients have to keep track of their records and share them with different doctors. Doctors have to store and access large amounts of data from various sources.
+- Data that doctors collect is insecure and patients lose control. Medical data is often stored on centralized servers that are vulnerable to hacking or data breaches. Patients have no way of knowing who has access to their data or how it is used.
+- It is hard for advertisers and researchers to buy data without dummy data. Advertisers and researchers need accurate and relevant medical data for their purposes, but they often have to deal with dummy data that is unreliable or unethical.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Solution and Benefits
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project proposes to use NFTs to store and manage medical data on the Ethereum blockchain. This would provide the following benefits:
 
-### `npm test`
+### User Benefits
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Security: NFTs could help ensure the privacy and security of medical data. Blockchain technology, which is often used to create NFTs, is known for its security features such as immutability and encryption. This means that medical data stored on a blockchain could be more secure and less susceptible to hacking or data breaches.
+- Verification of authenticity: NFTs can be used to verify the authenticity of medical documents, such as patient records and diagnostic reports. This could help prevent fraud and improve patient safety.
+- Control of data: Patients can have more control over their own data by using NFTs. They can decide who can access their data and for what purpose. They can also opt to sell their data to advertisers or researchers who are interested in it. They will know who buys their data and how much they pay for it.
+- Burnable copy of data: Patients can choose to burn their copy of the data after selling it or sharing it with someone else. This would ensure that they do not have duplicate copies of the same data that could cause confusion or conflict.
 
-### `npm run build`
+### Doctor Benefits
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- One stop access to data: Doctors can use NFTs to access all the relevant medical data of their patients in one place. They do not have to deal with multiple sources or formats of data. They can also update the data as needed, such as adding new medications or procedures.
+- Storage of medical records on ETH: Doctors can use ETH (Ethereum) as a storage medium for their medical records. ETH is a cryptocurrency that can be used to pay for transactions on the Ethereum blockchain. By storing their records on ETH, doctors can save money on storage costs and also earn rewards for validating transactions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Advertiser Benefits
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Easy access to precise data: Advertisers can use NFTs to buy precise medical data from patients who are willing to sell it. They can filter out large amounts of data based on various parameters, such as diagnosis, age range, location, etc. This would help them target their ads more effectively and efficiently.
+- Relevancy of ads for the patient: Advertisers can use NFTs to deliver relevant ads to the patients who are interested in them. For example, if a patient has diabetes, they might receive ads for diabetes-related products or services. This would increase the chances of conversion and customer satisfaction.
+- Lower costs: Advertisers can save money by using NFTs instead of dummy data. Dummy data is often unreliable or unethical, and it can also cost more than real data. By using NFTs, advertisers can get accurate and relevant data at a lower price.
 
-### `npm run eject`
+## Implementation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project uses smart contracts written in Solidity language to create and manage NFTs on the Ethereum blockchain. It also uses OpenZeppelin library, which provides reusable and secure code for common functionalities such as ERC721 standard, which defines how NFTs should work.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The project consists of three main components:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- A web interface that allows users to interact with the smart contracts and view their NFTs.
+- A backend server that handles the communication between the web interface and the smart contracts.
+- A database that stores the metadata of the NFTs, such as name, description, image URL, etc.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The project follows these steps:
 
-## Learn More
+1. A user registers on the web interface and creates an account with a wallet address.
+2. A user uploads their medical document (such as a PDF file) on the web interface
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To use this application, you must have MetaMask wallet or any other wallet installed on your device. You can download MetaMask from the following link: https://metamask.io/
 
-### Code Splitting
+Once you have installed the wallet, you need to connect to our private blockchain using the following:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+RPC link: http://34.131.237.20 <br>
+ChainId: `1337`
 
-### Analyzing the Bundle Size
+To install and run this application on your local machine, follow the steps below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository to your local machine.
+```bash
+git clone https://github.com/mahim37/MEdMASk 
+```
+2. Open the terminal and navigate to the project directory.
+```bash
+cd MEdMASk/
+```
+3. Install the dependencies
+```bash 
+npm install
+``` 
+4. Start the development Server
+```bash 
+npm start
+``` 
