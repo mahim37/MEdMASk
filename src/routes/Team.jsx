@@ -1,112 +1,140 @@
 import React from "react";
-import "./Team.css";
-function Team(){
-    return(
-        <section className="section-white">
-            <h1 className="section-title">
-                Our passionate and driven team
-            </h1>
-            <div className="container">
-                <div className="row">
-                    <div className="rowtwo">
-                        <div className="row-sm-6 col-md-4">
-                            <div className="team-item">
-                                <img src='https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' className="team-img"></img>
-                                <h2>Krish Thakrar</h2>
-                                <div className="team-info">
-                                    <p>Front-End Developer</p>
-                                    <div className="social-media">
-                                        <ul className="team-icon">
-                                            <li>
-                                                <a href="https://www.linkedin.com/in/krish-thakrar-a93144236/" className="linkedin">
-                                                    <i className="fa-brands fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="instagram">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-md-4">
-                            <div className="team-item">
-                                <img src='https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' className="team-img"></img>
-                                <h2>Abhilash Bora</h2>
-                                <div className="team-info">
-                                    <p className="role">Front-End Developer</p>
-                                    <div className="social-media">
-                                        <ul className="team-icon">
-                                            <li>
-                                                <a href="https://www.linkedin.com/in/abhilash-bora/" className="linkedin">
-                                                    <i className="fa-brands fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="instagram">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="rowtwo">
-                        <div className="row-sm-6 col-md-4">
-                            <div className="team-item">
-                                <img src='https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' className="team-img"></img>
-                                <h2>Mahim Gupta</h2>
-                                <div className="team-info">
-                                    <p>Back-End Developer</p>
-                                    <ul className="team-icon">
-                                        <li>
-                                            <a href="https://www.linkedin.com/in/mahim-gupta73/" className="linkedin">
-                                                <i className="fa-brands fa-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="instagram">
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-md-4">
-                            <div className="team-item">
-                                <img src='https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' className="team-img"></img>
-                                <h2>Sidhharth Rodrigues</h2>
-                                <div className="team-info">
-                                    <p>Back-End Developer</p>
-                                    <div className="social-media">
-                                    <div className="social-media">
-                                        <ul className="team-icon">
-                                            <li>
-                                                <a href="https://www.linkedin.com/in/dorddis/" className="linkedin">
-                                                    <i className="fa-brands fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="instagram">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+function Team() {
+  return (
+    <section style={{width: '85%',marginLeft:'7.5%',marginRight:'7.5%',boxShadow: '0 5px 15px 0 rgb(51, 54, 54)'}}>
+      <h1 className="text-3xl font-bold text-center mb-8">
+        Our passionate and driven team
+      </h1>
+      <br></br>
+      <br></br>
+      <div className="container mx-auto">
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
+            <div className="bg-gray-300 p-4 shadow">
+              <h2 className="text-xl font-bold mb-2">Krish Thakrar</h2>
+              <div className="team-info">
+                <p className="text-gray-600">Front-End Developer</p>
+                <div className="social-media">
+                  <ul className="flex space-x-2">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/krish-thakrar-a93144236/"
+                        className="linkedin"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/krish_thakrar_1710/" className="instagram">
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/krishiiitp" className="github">
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
-        </section>
-    )
+          </div>
+          <div className="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
+            <div className="bg-gray-100 p-4 shadow">
+              <h2 className="text-xl font-bold mb-2">Abhilash Bora</h2>
+              <div className="team-info">
+                <p className="text-gray-600">Front-End Developer</p>
+                <div className="social-media">
+                  <ul className="flex space-x-2">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/abhilash-bora/"
+                        className="linkedin"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/_abhilash.31/" className="instagram">
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/Abhilash-3107" className="github">
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
+            <div className="bg-gray-100 p-4 shadow">
+              <h2 className="text-xl font-bold mb-2">Mahim Gupta</h2>
+              <div className="team-info">
+                <p className="text-gray-600">Back-End Developer</p>
+                <div className="social-media">
+                  <ul className="flex space-x-2">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/mahim-gupta73/"
+                        className="linkedin"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="instagram">
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/mahim37" className="github">
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
+            <div className="bg-gray-300 p-4 shadow">
+              <h2 className="text-xl font-bold mb-2">Sidhharth Rodrigues</h2>
+              <div className="team-info">
+                <p className="text-gray-600">Back-End Developer</p>
+                <div className="social-media">
+                  <ul className="flex space-x-2">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/dorddis/"
+                        className="linkedin"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/dorddis/" className="instagram">
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/dorddis" className="github">
+                        <i className="fa-brands fa-github"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
+
 export default Team;
