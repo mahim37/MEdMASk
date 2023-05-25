@@ -6,7 +6,7 @@ function SignupPatient() {
         <>
         <NewNavbar/>
         <Dashboarddata/>
-        <Footer></Footer>
+        <Footer/>
         </>
         
     )

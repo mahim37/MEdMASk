@@ -30,7 +30,7 @@ export default class Navbar extends Component {
             );
           })}
           <Link className="nav-links-new" to="/signup">
-            <i class="fa-solid fa-user-plus"></i>
+            <i className="fa-solid fa-user-plus"></i>
             Sign Up
           </Link>
         </ul>
