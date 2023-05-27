@@ -8,6 +8,8 @@ import HealthNFT from "./HealthNFT.json";
 import { ethers } from "ethers";
 import { Fragment } from "react";
 export default function Listmynft() {
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
+
   const [formParams, updateFormParams] = useState({
     name: "",
     sex: "",
@@ -278,12 +280,28 @@ export default function Listmynft() {
             </div>
             <br></br>
             <div className="text-green text-center">{message}</div>
-            <button
-              onClick={listNFT}
-              className="listbtn bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-md transition-colors duration-300 ease-in-out w-full sm:w-auto"
-            >
-              List NFT
-            </button>
+            <label style={checkboxLabelStyle}>
+            <input
+  type="checkbox"
+  style={checkboxStyle}
+  checked={isCheckboxChecked}
+  onChange={(e) => setIsCheckboxChecked(e.target.checked)}
+/>
+
+          I consent to the conversion of my medical data into an NFT.
+        </label>
+        <br></br>
+        <button
+  onClick={listNFT}
+  className={`listbtn bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-md transition-colors duration-300 ease-in-out w-full sm:w-auto ${
+    !isCheckboxChecked ? 'opacity-50 hover:bg-purple-500' : ''
+  }`}
+  disabled={!isCheckboxChecked}
+>
+  List NFT
+</button>
+
+
 
             {showDialog && (
               <Dialog message={dialogMessage} onClose={handleCloseDialog} />
@@ -294,3 +312,11 @@ export default function Listmynft() {
     </>
   );
 }
+const checkboxStyle = {
+  marginRight: '5px',
+};
+const checkboxLabelStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  marginRight: '10px',
+};
