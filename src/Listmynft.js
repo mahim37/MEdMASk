@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { uploadFileToIPFS, uploadJSONToIPFS } from "./pinata";
-
+import Footer from './components/Footer'
 import { useLocation } from "react-router";
 import "./Listmynft.css";
 import NewNavbar from "./components/NewNavbar";
@@ -306,6 +306,7 @@ export default function Listmynft() {
           </form>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

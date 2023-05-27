@@ -1,10 +1,10 @@
-import NewNavbar from "../components/NewNavbar";
+import HINavbar from "../components/HINavbar";
 import Footer from "../components/Footer";
 import HospitalInterface from './HospitalInterface';
 function Signupdoctor() {
     return (
         <>
-        <NewNavbar/>
+        <HINavbar/>
         <HospitalInterface />
         <Footer></Footer>
         </>  
