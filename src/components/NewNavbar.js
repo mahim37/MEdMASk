@@ -25,7 +25,7 @@ export default function NewNavbar() {
         setCurrAddress(address);
         setConnected(true);
       } else {
-        console.log("Metamask not found");
+        window.location.href = 'https://metamask.io/download.html';
       }
     } catch (err) {
       console.error(err);
