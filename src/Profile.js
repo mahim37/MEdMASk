@@ -14,27 +14,22 @@ export default function Dashboard() {
 
   async function getNFTData(tokenId) {
     let sumPrice = 0;
-    //After adding your Hardhat network to your metamask, this code will get providers and signers
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
     const addr = await signer.getAddress();
 
-    //Pull the deployed contract instance
     let contract = new ethers.Contract(
       HealthNFTJSON.address,
       HealthNFTJSON.abi,
       signer
     );
-    //create an NFT TokenConnected to 0xBf6EA356cbF33...
     let transaction1 = await contract.getMyNFTs();
     console.log(transaction1);
-    let transaction = new Array(transaction1[transaction1.length - 1]);
-    /*
-     * Below function takes the metadata from tokenURI and the data returned by getMyNFTs() contract function
-     * and creates an object of information that is to be displayed
-     */
+
+    let transactions = transaction1.slice().reverse(); // Reverse the array to start from the last element
+
     const items = await Promise.all(
-      transaction.map(async (i) => {
+      transactions.map(async (i) => {
         const tokenURI = await contract.tokenURI(i.tokenId);
         console.log(tokenURI);
         let meta = await axios.get(tokenURI);
@@ -55,6 +50,7 @@ export default function Dashboard() {
         return item;
       })
     );
+
     updateData(items);
     updateFetched(true);
     updateAddress(addr);
