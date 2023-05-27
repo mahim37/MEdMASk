@@ -6,6 +6,7 @@ function Marketplaces() {
   return (
     <>
       <Navbar />
+      <br></br>
       <MarketplacesCards />
       <Footer></Footer>
     </>
