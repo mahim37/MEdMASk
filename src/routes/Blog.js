@@ -6,7 +6,8 @@ function Blog() {
         How<span className="somespan"> NFTs </span>Are Changing the
         Healthcare Industry: <br></br>A Look at Our Innovative Solution
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <br></br>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8" style={{width:'90%',marginLeft:'5%',marginRight:'5%'}}>
         <div className="border border-gray-300 rounded p-4">
           <h2 className="text-lg font-bold mb-2">
             Verification of authenticity:
