@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./NavbarStyles.css";
 import { MenuItemsCopy } from "./MenuItemsCopy";
 import { Link } from "react-router-dom";
-
 import { ethers } from "ethers";
 
 export default function NewNavbar() {
@@ -25,12 +24,13 @@ export default function NewNavbar() {
         setCurrAddress(address);
         setConnected(true);
       } else {
-        window.location.href = 'https://metamask.io/download.html';
+        window.location.href = "https://metamask.io/download.html";
       }
     } catch (err) {
       console.error(err);
     }
   };
+
   useEffect(() => {
     const { ethereum } = window;
     if (ethereum && ethereum.selectedAddress) {
@@ -38,21 +38,25 @@ export default function NewNavbar() {
       setCurrAddress(ethereum.selectedAddress);
     }
 
-    ethereum.on("accountsChanged", (accounts) => {
-      if (accounts.length === 0) {
-        setConnected(false);
-        setCurrAddress("0x");
-      } else {
-        setConnected(true);
-        setCurrAddress(accounts[0]);
-      }
-    });
+    if (ethereum) {
+      ethereum.on("accountsChanged", (accounts) => {
+        if (accounts.length === 0) {
+          setConnected(false);
+          setCurrAddress("0x");
+        } else {
+          setConnected(true);
+          setCurrAddress(accounts[0]);
+        }
+      });
+    }
+
     window.addEventListener("load", async () => {
       if (ethereum && ethereum.selectedAddress) {
         setConnected(true);
         setCurrAddress(ethereum.selectedAddress);
       }
     });
+
     return () => {
       if (ethereum) {
         ethereum.removeAllListeners("accountsChanged");
