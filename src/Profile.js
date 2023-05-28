@@ -43,7 +43,12 @@ export default function Dashboard() {
           owner: i.owner,
           image: meta.image,
           name: meta.name,
-          description: meta.description,
+          age: meta.age,
+          sex: meta.sex,
+          phone: meta.phone,
+          doctorName: meta.doctorName,
+          diagnosis: meta.diagnosis,
+          date: meta.date,
         };
         sumPrice += Number(price);
         console.log(sumPrice);

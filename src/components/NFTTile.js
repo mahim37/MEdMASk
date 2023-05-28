@@ -15,7 +15,13 @@ function NFTTile(data) {
         />
         <div className="text-white w-full p-2 bg-gradient-to-t from-[#454545] to-transparent rounded-lg pt-5 -mt-20">
           <strong className="text-xl">{data.data.name}</strong>
-          <p className="display-inline">{data.data.description}</p>
+          <p className="display-inline">{data.data.age}</p>
+          <p className="display-inline">{data.data.sex}</p>
+          <p className="display-inline">{data.data.phone}</p>
+
+          <p className="display-inline">{data.data.doctorName}</p>
+          <p className="display-inline">{data.data.date}</p>
+          <p className="display-inline">{data.data.diagnosis}</p>
         </div>
       </div>
     </Link>
