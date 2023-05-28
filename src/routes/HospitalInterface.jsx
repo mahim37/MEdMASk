@@ -225,6 +225,11 @@ const HospitalInterface = () => {
       >
         Append Diagnosis
       </button>
+
+
+      {showDialog && (
+              <Dialog message={dialogMessage} onClose={handleCloseDialog} />
+            )}
     </div>
   );
 };
